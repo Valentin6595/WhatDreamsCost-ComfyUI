@@ -7,7 +7,7 @@ Hopefully it will make creating cool stuff easier.
 All of my nodes are created with the help of AI, so there may or may not be redundant, messy code.
 
 ## ▶️ YouTube Video 
-https://youtu.be/GGuK4DPiEVw
+(https://img.youtube.com/vi/GGuK4DPiEVw/0.jpg)](https://www.youtube.com/watch?v=GGuK4DPiEVw)
 
 ## ⚙️ How to install nodes
 
