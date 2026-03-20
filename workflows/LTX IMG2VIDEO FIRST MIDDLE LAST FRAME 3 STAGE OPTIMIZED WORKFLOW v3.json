@@ -2,7 +2,7 @@
   "id": "1143f409-9410-46d0-a303-318c1b2d0391",
   "revision": 0,
   "last_node_id": 433,
-  "last_link_id": 1060,
+  "last_link_id": 1061,
   "nodes": [
     {
       "id": 4,
@@ -16,7 +16,7 @@
         60
       ],
       "flags": {},
-      "order": 9,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -67,7 +67,7 @@
         440
       ],
       "flags": {},
-      "order": 12,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -109,7 +109,7 @@
         100
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -200,7 +200,7 @@
         152
       ],
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -515,7 +515,7 @@
         315.671875
       ],
       "flags": {},
-      "order": 10,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -602,14 +602,14 @@
       "bgcolor": "#000"
     },
     {
-      "id": 418,
+      "id": 16,
       "type": "Note",
       "pos": [
-        3310,
-        5810
+        4680,
+        6110
       ],
       "size": [
-        220,
+        210,
         88
       ],
       "flags": {},
@@ -617,10 +617,9 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "title": "Model Loader Note",
       "properties": {},
       "widgets_values": [
-        "↓ Select your own models in here ↓"
+        "Enable optimized decoding to use tiled vae decoder."
       ],
       "color": "#322",
       "bgcolor": "#533"
@@ -629,8 +628,8 @@
       "id": 15,
       "type": "Note",
       "pos": [
-        3890,
-        5800
+        3750,
+        5740
       ],
       "size": [
         210,
@@ -650,10 +649,76 @@
       "bgcolor": "#533"
     },
     {
-      "id": 431,
+      "id": 1,
+      "type": "34d63160-e149-4935-ab1f-892ffe617fec",
+      "pos": [
+        4680,
+        5950
+      ],
+      "size": [
+        244.98828125,
+        114
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "av_latent",
+          "type": "LATENT",
+          "link": 47
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 2
+        },
+        {
+          "label": "video_vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 31
+        },
+        {
+          "label": "Use Optimized Decoding",
+          "name": "value",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "value"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2"
+      },
+      "widgets_values": [
+        false
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 418,
       "type": "Note",
       "pos": [
-        3070,
+        3110,
         5810
       ],
       "size": [
@@ -665,13 +730,13 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "title": "Additional Info",
+      "title": "Model Loader Note",
       "properties": {},
       "widgets_values": [
-        "https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI"
+        "↓ Select your own models in here ↓"
       ],
-      "color": "#232",
-      "bgcolor": "#353"
+      "color": "#322",
+      "bgcolor": "#533"
     },
     {
       "id": 10,
@@ -703,15 +768,6 @@
           "type": "INT",
           "widget": {
             "name": "value_1"
-          },
-          "link": null
-        },
-        {
-          "label": "Enable CacheDiT",
-          "name": "enable",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "enable"
           },
           "link": null
         },
@@ -811,10 +867,6 @@
           ],
           [
             "-1",
-            "enable"
-          ],
-          [
-            "-1",
             "value_2"
           ]
         ],
@@ -826,100 +878,10 @@
         5,
         null,
         null,
-        false,
         false
       ],
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 1,
-      "type": "34d63160-e149-4935-ab1f-892ffe617fec",
-      "pos": [
-        4680,
-        5950
-      ],
-      "size": [
-        244.98828125,
-        114
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "av_latent",
-          "type": "LATENT",
-          "link": 47
-        },
-        {
-          "name": "audio_vae",
-          "type": "VAE",
-          "link": 2
-        },
-        {
-          "label": "video_vae",
-          "name": "vae",
-          "type": "VAE",
-          "link": 31
-        },
-        {
-          "label": "Use Optimized Decoding",
-          "name": "value",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "value"
-          },
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VIDEO",
-          "type": "VIDEO",
-          "links": [
-            13
-          ]
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "-1",
-            "value"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.17.2"
-      },
-      "widgets_values": [
-        false
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 16,
-      "type": "Note",
-      "pos": [
-        4680,
-        6110
-      ],
-      "size": [
-        210,
-        88
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Enable optimized decoding to use tiled vae decoder."
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
     }
   ],
   "links": [
@@ -1109,7 +1071,7 @@
         "state": {
           "lastGroupId": 33,
           "lastNodeId": 433,
-          "lastLinkId": 1060,
+          "lastLinkId": 1061,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1701,7 +1663,7 @@
         "state": {
           "lastGroupId": 33,
           "lastNodeId": 433,
-          "lastLinkId": 1060,
+          "lastLinkId": 1061,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -2210,7 +2172,7 @@
         "state": {
           "lastGroupId": 33,
           "lastNodeId": 433,
-          "lastLinkId": 1060,
+          "lastLinkId": 1061,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -3395,7 +3357,7 @@
         "state": {
           "lastGroupId": 33,
           "lastNodeId": 433,
-          "lastLinkId": 1060,
+          "lastLinkId": 1061,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -3829,7 +3791,7 @@
         "state": {
           "lastGroupId": 33,
           "lastNodeId": 433,
-          "lastLinkId": 1060,
+          "lastLinkId": 1061,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -5235,7 +5197,7 @@
         "state": {
           "lastGroupId": 33,
           "lastNodeId": 433,
-          "lastLinkId": 1060,
+          "lastLinkId": 1061,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -5247,7 +5209,7 @@
             2290,
             5440,
             205.580078125,
-            120
+            100
           ]
         },
         "outputNode": {
@@ -5287,19 +5249,6 @@
             ]
           },
           {
-            "id": "c0e41771-fd73-47f0-8691-3dc41c5fa2e0",
-            "name": "enable",
-            "type": "BOOLEAN",
-            "linkIds": [
-              1020
-            ],
-            "label": "Enable CacheDiT",
-            "pos": [
-              2475.580078125,
-              5500
-            ]
-          },
-          {
             "id": "da3542a6-954e-4c72-a1ed-8de3ffd0407d",
             "name": "value_2",
             "type": "BOOLEAN",
@@ -5309,7 +5258,7 @@
             "label": "Use Gemma API Text Encode",
             "pos": [
               2475.580078125,
-              5520
+              5500
             ]
           }
         ],
@@ -5319,7 +5268,7 @@
             "name": "optimized_model",
             "type": "MODEL",
             "linkIds": [
-              720
+              1061
             ],
             "pos": [
               4360,
@@ -5419,50 +5368,6 @@
         "widgets": [],
         "nodes": [
           {
-            "id": 344,
-            "type": "LTXVChunkFeedForward",
-            "pos": [
-              3840,
-              5320
-            ],
-            "size": [
-              212.35703125,
-              82
-            ],
-            "flags": {},
-            "order": 13,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "model",
-                "name": "model",
-                "type": "MODEL",
-                "link": 697
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "model",
-                "name": "model",
-                "type": "MODEL",
-                "links": [
-                  698
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfyui-kjnodes",
-              "ver": "1.2.5",
-              "Node name for S&R": "LTXVChunkFeedForward"
-            },
-            "widgets_values": [
-              2,
-              4096
-            ],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
             "id": 365,
             "type": "07609e03-45f4-49c7-a233-a933ebf95094",
             "pos": [
@@ -5474,7 +5379,7 @@
               58
             ],
             "flags": {},
-            "order": 18,
+            "order": 16,
             "mode": 0,
             "inputs": [
               {
@@ -5580,7 +5485,7 @@
               178
             ],
             "flags": {},
-            "order": 12,
+            "order": 11,
             "mode": 0,
             "inputs": [
               {
@@ -5628,7 +5533,7 @@
               80
             ],
             "flags": {},
-            "order": 17,
+            "order": 15,
             "mode": 0,
             "inputs": [
               {
@@ -5821,29 +5726,6 @@
             "bgcolor": "#533"
           },
           {
-            "id": 422,
-            "type": "Note",
-            "pos": [
-              4060,
-              5110
-            ],
-            "size": [
-              240,
-              160
-            ],
-            "flags": {},
-            "order": 5,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [],
-            "properties": {},
-            "widgets_values": [
-              "CacheDiT is optional. \n\nThe lowest I would recommend is 2 warmup_Steps, 2 skip_interval. It will speed up generation 1.5x with this workflow.\n\nYou will have to edit nodes_ltx2.py in the CacheDiT directory to lower the minimum values though.\n\n"
-            ],
-            "color": "#322",
-            "bgcolor": "#533"
-          },
-          {
             "id": 340,
             "type": "LTX2SamplingPreviewOverride",
             "pos": [
@@ -5855,7 +5737,7 @@
               100
             ],
             "flags": {},
-            "order": 9,
+            "order": 8,
             "mode": 0,
             "inputs": [
               {
@@ -5912,7 +5794,7 @@
               82
             ],
             "flags": {},
-            "order": 10,
+            "order": 9,
             "mode": 0,
             "inputs": [
               {
@@ -5970,7 +5852,7 @@
               98
             ],
             "flags": {},
-            "order": 6,
+            "order": 5,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -6018,7 +5900,7 @@
               122
             ],
             "flags": {},
-            "order": 7,
+            "order": 6,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -6056,7 +5938,7 @@
               26
             ],
             "flags": {},
-            "order": 15,
+            "order": 13,
             "mode": 0,
             "inputs": [
               {
@@ -6104,7 +5986,7 @@
               78
             ],
             "flags": {},
-            "order": 20,
+            "order": 18,
             "mode": 0,
             "inputs": [
               {
@@ -6163,7 +6045,7 @@
               88
             ],
             "flags": {},
-            "order": 22,
+            "order": 20,
             "mode": 0,
             "inputs": [
               {
@@ -6217,7 +6099,7 @@
               60
             ],
             "flags": {},
-            "order": 21,
+            "order": 19,
             "mode": 0,
             "inputs": [
               {
@@ -6264,7 +6146,7 @@
               58
             ],
             "flags": {},
-            "order": 8,
+            "order": 7,
             "mode": 0,
             "inputs": [],
             "outputs": [
@@ -6300,7 +6182,7 @@
               160
             ],
             "flags": {},
-            "order": 16,
+            "order": 14,
             "mode": 0,
             "inputs": [
               {
@@ -6349,7 +6231,7 @@
               160
             ],
             "flags": {},
-            "order": 19,
+            "order": 17,
             "mode": 0,
             "inputs": [
               {
@@ -6397,7 +6279,7 @@
               60
             ],
             "flags": {},
-            "order": 11,
+            "order": 10,
             "mode": 0,
             "inputs": [
               {
@@ -6429,57 +6311,45 @@
             "bgcolor": "#000"
           },
           {
-            "id": 345,
-            "type": "CacheDiT_LTX2_Optimizer",
+            "id": 344,
+            "type": "LTXVChunkFeedForward",
             "pos": [
-              4060,
+              3840,
               5320
             ],
             "size": [
-              251.78671875,
-              154
+              212.35703125,
+              82
             ],
             "flags": {},
-            "order": 14,
+            "order": 12,
             "mode": 0,
             "inputs": [
               {
                 "localized_name": "model",
                 "name": "model",
                 "type": "MODEL",
-                "link": 698
-              },
-              {
-                "localized_name": "enable",
-                "name": "enable",
-                "type": "BOOLEAN",
-                "widget": {
-                  "name": "enable"
-                },
-                "link": 1020
+                "link": 697
               }
             ],
             "outputs": [
               {
-                "localized_name": "optimized_model",
-                "name": "optimized_model",
+                "localized_name": "model",
+                "name": "model",
                 "type": "MODEL",
                 "links": [
-                  720
+                  1061
                 ]
               }
             ],
             "properties": {
-              "aux_id": "Jasonzzt/ComfyUI-CacheDiT",
-              "ver": "914b2d46b498c34752b555444349fe760cca93e6",
-              "Node name for S&R": "CacheDiT_LTX2_Optimizer"
+              "cnr_id": "comfyui-kjnodes",
+              "ver": "1.2.5",
+              "Node name for S&R": "LTXVChunkFeedForward"
             },
             "widgets_values": [
-              false,
               2,
-              3,
-              0.001,
-              false
+              4096
             ],
             "color": "#222",
             "bgcolor": "#000"
@@ -6504,26 +6374,10 @@
             "type": "MODEL"
           },
           {
-            "id": 698,
-            "origin_id": 344,
-            "origin_slot": 0,
-            "target_id": 345,
-            "target_slot": 0,
-            "type": "MODEL"
-          },
-          {
             "id": 696,
             "origin_id": 342,
             "origin_slot": 0,
             "target_id": 343,
-            "target_slot": 0,
-            "type": "MODEL"
-          },
-          {
-            "id": 720,
-            "origin_id": 345,
-            "origin_slot": 0,
-            "target_id": -20,
             "target_slot": 0,
             "type": "MODEL"
           },
@@ -6616,17 +6470,9 @@
             "type": "INT"
           },
           {
-            "id": 1020,
-            "origin_id": -10,
-            "origin_slot": 2,
-            "target_id": 345,
-            "target_slot": 1,
-            "type": "BOOLEAN"
-          },
-          {
             "id": 1021,
             "origin_id": -10,
-            "origin_slot": 3,
+            "origin_slot": 2,
             "target_id": 416,
             "target_slot": 0,
             "type": "BOOLEAN"
@@ -6710,6 +6556,14 @@
             "target_id": 362,
             "target_slot": 0,
             "type": "STRING"
+          },
+          {
+            "id": 1061,
+            "origin_id": 344,
+            "origin_slot": 0,
+            "target_id": -20,
+            "target_slot": 0,
+            "type": "MODEL"
           }
         ],
         "extra": {
@@ -6722,7 +6576,7 @@
         "state": {
           "lastGroupId": 33,
           "lastNodeId": 433,
-          "lastLinkId": 1060,
+          "lastLinkId": 1061,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -6962,7 +6816,7 @@
         "state": {
           "lastGroupId": 33,
           "lastNodeId": 433,
-          "lastLinkId": 1060,
+          "lastLinkId": 1061,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -7813,10 +7667,10 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 1.1698242013182631,
+      "scale": 0.9090909090909092,
       "offset": [
-        -3278.905909774425,
-        -5598.792567715585
+        -2841.508309999999,
+        -5622.034369999999
       ]
     }
   },
