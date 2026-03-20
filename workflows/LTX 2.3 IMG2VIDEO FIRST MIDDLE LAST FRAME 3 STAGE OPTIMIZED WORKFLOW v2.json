@@ -1,8 +1,8 @@
 {
   "id": "1143f409-9410-46d0-a303-318c1b2d0391",
   "revision": 0,
-  "last_node_id": 431,
-  "last_link_id": 1057,
+  "last_node_id": 433,
+  "last_link_id": 1060,
   "nodes": [
     {
       "id": 4,
@@ -54,29 +54,6 @@
       "widgets_values": [],
       "color": "#222",
       "bgcolor": "#000"
-    },
-    {
-      "id": 16,
-      "type": "Note",
-      "pos": [
-        4680,
-        6110
-      ],
-      "size": [
-        210,
-        88
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "Enable optimized decoding if you run out of memory or experience slow decoding with the default vae decode."
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
     },
     {
       "id": 5,
@@ -188,30 +165,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 15,
-      "type": "Note",
-      "pos": [
-        3890,
-        5800
-      ],
-      "size": [
-        210,
-        88
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "LTX Sequencer Note",
-      "properties": {},
-      "widgets_values": [
-        "Use one image at full strength for regular image to video.\n\nIf frame_insert is -1, it will be insert at the last frame."
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 14,
       "type": "Note",
       "pos": [
@@ -223,7 +176,7 @@
         88
       ],
       "flags": {},
-      "order": 2,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -510,6 +463,217 @@
       "bgcolor": "#000"
     },
     {
+      "id": 381,
+      "type": "MultiImageLoader",
+      "pos": [
+        3550,
+        5950
+      ],
+      "size": [
+        310,
+        277
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "multi_output",
+          "type": "IMAGE",
+          "links": [
+            1046,
+            1047,
+            1048
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MultiImageLoader"
+      },
+      "widgets_values": [
+        "",
+        0,
+        0,
+        "lanczos",
+        32,
+        18,
+        ""
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 11,
+      "type": "360d64f7-96cd-42a6-9b13-6eb0387e17d9",
+      "pos": [
+        4420,
+        5950
+      ],
+      "size": [
+        230,
+        315.671875
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 40
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 799
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 800
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 804
+        },
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 44
+        },
+        {
+          "label": "video_vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 45
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "upscale 2x on stage 3",
+          "name": "value",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        },
+        {
+          "name": "multi_input",
+          "type": "IMAGE",
+          "link": 1046
+        },
+        {
+          "label": "2x_upscale_model",
+          "name": "upscale_model",
+          "type": "LATENT_UPSCALE_MODEL",
+          "link": 1037
+        }
+      ],
+      "outputs": [
+        {
+          "label": "av_output",
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            47
+          ]
+        }
+      ],
+      "properties": {
+        "proxyWidgets": [
+          [
+            "-1",
+            "value"
+          ]
+        ],
+        "cnr_id": "comfy-core",
+        "ver": "0.17.2"
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 418,
+      "type": "Note",
+      "pos": [
+        3310,
+        5810
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Model Loader Note",
+      "properties": {},
+      "widgets_values": [
+        "↓ Select your own models in here ↓"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 15,
+      "type": "Note",
+      "pos": [
+        3890,
+        5800
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "LTX Sequencer Note",
+      "properties": {},
+      "widgets_values": [
+        "Use one image at full strength for regular image to video.\n\nIf frame_insert is -1, it will be inserted at the last frame."
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 431,
+      "type": "Note",
+      "pos": [
+        3070,
+        5810
+      ],
+      "size": [
+        220,
+        88
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Additional Info",
+      "properties": {},
+      "widgets_values": [
+        "https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
       "id": 10,
       "type": "958b2c7a-1f75-4a30-84a8-892bddb9e426",
       "pos": [
@@ -521,7 +685,7 @@
         550
       ],
       "flags": {},
-      "order": 3,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -669,47 +833,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 381,
-      "type": "MultiImageLoader",
-      "pos": [
-        3550,
-        5950
-      ],
-      "size": [
-        310,
-        277
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "multi_output",
-          "type": "IMAGE",
-          "links": [
-            1046,
-            1047,
-            1048
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "MultiImageLoader"
-      },
-      "widgets_values": [
-        "",
-        0,
-        0,
-        "lanczos",
-        32,
-        18,
-        ""
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
       "id": 1,
       "type": "34d63160-e149-4935-ab1f-892ffe617fec",
       "pos": [
@@ -770,142 +893,20 @@
         "ver": "0.17.2"
       },
       "widgets_values": [
-        true
+        false
       ],
       "color": "#222",
       "bgcolor": "#000"
     },
     {
-      "id": 11,
-      "type": "360d64f7-96cd-42a6-9b13-6eb0387e17d9",
-      "pos": [
-        4420,
-        5950
-      ],
-      "size": [
-        230,
-        315.671875
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 40
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 799
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 800
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 804
-        },
-        {
-          "name": "noise",
-          "type": "NOISE",
-          "link": 44
-        },
-        {
-          "label": "video_vae",
-          "name": "vae",
-          "type": "VAE",
-          "link": 45
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": null
-        },
-        {
-          "label": "upscale 2x on stage 3",
-          "name": "value",
-          "type": "BOOLEAN",
-          "widget": {
-            "name": "value"
-          },
-          "link": null
-        },
-        {
-          "name": "multi_input",
-          "type": "IMAGE",
-          "link": 1046
-        },
-        {
-          "label": "2x_upscale_model",
-          "name": "upscale_model",
-          "type": "LATENT_UPSCALE_MODEL",
-          "link": 1037
-        }
-      ],
-      "outputs": [
-        {
-          "label": "av_output",
-          "name": "output",
-          "type": "LATENT",
-          "links": [
-            47
-          ]
-        }
-      ],
-      "properties": {
-        "proxyWidgets": [
-          [
-            "-1",
-            "value"
-          ]
-        ],
-        "cnr_id": "comfy-core",
-        "ver": "0.17.2"
-      },
-      "widgets_values": [
-        true
-      ],
-      "color": "#222",
-      "bgcolor": "#000"
-    },
-    {
-      "id": 431,
+      "id": 16,
       "type": "Note",
       "pos": [
-        3070,
-        5810
+        4680,
+        6110
       ],
       "size": [
-        220,
-        88
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Additional Info",
-      "properties": {},
-      "widgets_values": [
-        "https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 418,
-      "type": "Note",
-      "pos": [
-        3310,
-        5810
-      ],
-      "size": [
-        220,
+        210,
         88
       ],
       "flags": {},
@@ -913,10 +914,9 @@
       "mode": 0,
       "inputs": [],
       "outputs": [],
-      "title": "Model Loader Note",
       "properties": {},
       "widgets_values": [
-        "↓ Select your own models in here ↓"
+        "Enable optimized decoding to use tiled vae decoder."
       ],
       "color": "#322",
       "bgcolor": "#533"
@@ -1108,8 +1108,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 431,
-          "lastLinkId": 1057,
+          "lastNodeId": 433,
+          "lastLinkId": 1060,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -1120,7 +1120,7 @@
           "bounding": [
             1610,
             7190,
-            179.763671875,
+            180.98828125,
             120
           ]
         },
@@ -1142,7 +1142,7 @@
               692
             ],
             "pos": [
-              1769.763671875,
+              1770.98828125,
               7210
             ]
           },
@@ -1154,7 +1154,7 @@
               693
             ],
             "pos": [
-              1769.763671875,
+              1770.98828125,
               7230
             ]
           },
@@ -1164,11 +1164,11 @@
             "type": "VAE",
             "linkIds": [
               703,
-              706
+              1060
             ],
             "label": "video_vae",
             "pos": [
-              1769.763671875,
+              1770.98828125,
               7250
             ]
           },
@@ -1181,7 +1181,7 @@
             ],
             "label": "Use Optimized Decoding",
             "pos": [
-              1769.763671875,
+              1770.98828125,
               7270
             ]
           }
@@ -1258,102 +1258,6 @@
             "bgcolor": "#000"
           },
           {
-            "id": 338,
-            "type": "VHS_LoadImagesPath",
-            "pos": [
-              2150,
-              7390
-            ],
-            "size": [
-              247.98828125,
-              170
-            ],
-            "flags": {},
-            "order": 4,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "meta_batch",
-                "name": "meta_batch",
-                "shape": 7,
-                "type": "VHS_BatchManager",
-                "link": null
-              },
-              {
-                "localized_name": "directory",
-                "name": "directory",
-                "type": "STRING",
-                "widget": {
-                  "name": "directory"
-                },
-                "link": 699
-              },
-              {
-                "label": "image_load_cap",
-                "localized_name": "image_load_cap",
-                "name": "image_load_cap",
-                "shape": 7,
-                "type": "INT",
-                "widget": {
-                  "name": "image_load_cap"
-                },
-                "link": null
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "links": [
-                  700
-                ]
-              },
-              {
-                "localized_name": "MASK",
-                "name": "MASK",
-                "type": "MASK",
-                "links": null
-              },
-              {
-                "localized_name": "frame_count",
-                "name": "frame_count",
-                "type": "INT",
-                "links": null
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfyui-videohelpersuite",
-              "ver": "993082e4f2473bf4acaf06f51e33877a7eb38960",
-              "Node name for S&R": "VHS_LoadImagesPath",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "input_ue_unconnectable": {},
-                "version": "7.7"
-              }
-            },
-            "widgets_values": {
-              "directory": "ComfyUI/temp/",
-              "image_load_cap": 0,
-              "skip_first_images": 0,
-              "select_every_nth": 1,
-              "videopreview": {
-                "hidden": false,
-                "paused": false,
-                "params": {
-                  "image_load_cap": 0,
-                  "skip_first_images": 0,
-                  "select_every_nth": 1,
-                  "filename": "ComfyUI/temp/",
-                  "type": "path",
-                  "format": "folder"
-                }
-              }
-            },
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
             "id": 334,
             "type": "LTXVSeparateAVLatent",
             "pos": [
@@ -1382,7 +1286,7 @@
                 "type": "LATENT",
                 "links": [
                   702,
-                  705
+                  1059
                 ]
               },
               {
@@ -1405,53 +1309,6 @@
               "secondTabText": "Send Back",
               "secondTabOffset": 80,
               "secondTabWidth": 65
-            },
-            "widgets_values": [],
-            "color": "#222",
-            "bgcolor": "#000"
-          },
-          {
-            "id": 340,
-            "type": "VAEDecode",
-            "pos": [
-              2230,
-              7240
-            ],
-            "size": [
-              150,
-              50
-            ],
-            "flags": {},
-            "order": 6,
-            "mode": 0,
-            "inputs": [
-              {
-                "localized_name": "samples",
-                "name": "samples",
-                "type": "LATENT",
-                "link": 702
-              },
-              {
-                "localized_name": "vae",
-                "name": "vae",
-                "type": "VAE",
-                "link": 703
-              }
-            ],
-            "outputs": [
-              {
-                "localized_name": "IMAGE",
-                "name": "IMAGE",
-                "type": "IMAGE",
-                "links": [
-                  701
-                ]
-              }
-            ],
-            "properties": {
-              "cnr_id": "comfy-core",
-              "ver": "0.17.2",
-              "Node name for S&R": "VAEDecode"
             },
             "widgets_values": [],
             "color": "#222",
@@ -1482,7 +1339,7 @@
                 "localized_name": "on_true",
                 "name": "on_true",
                 "type": "*",
-                "link": 700
+                "link": 1058
               },
               {
                 "localized_name": "switch",
@@ -1584,7 +1441,7 @@
               58
             ],
             "flags": {},
-            "order": 7,
+            "order": 5,
             "mode": 0,
             "inputs": [
               {
@@ -1614,80 +1471,109 @@
               "Node name for S&R": "PrimitiveBoolean"
             },
             "widgets_values": [
-              true
+              false
             ],
             "color": "#222",
             "bgcolor": "#000"
           },
           {
-            "id": 339,
-            "type": "IAMCCS_VAEDecodeToDisk",
+            "id": 340,
+            "type": "VAEDecode",
             "pos": [
-              1820,
-              7390
+              2230,
+              7230
             ],
             "size": [
-              298.941015625,
-              270
+              150,
+              50
             ],
             "flags": {},
-            "order": 5,
+            "order": 4,
             "mode": 0,
             "inputs": [
               {
                 "localized_name": "samples",
                 "name": "samples",
                 "type": "LATENT",
-                "link": 705
+                "link": 702
               },
               {
                 "localized_name": "vae",
                 "name": "vae",
                 "type": "VAE",
-                "link": 706
+                "link": 703
               }
             ],
             "outputs": [
               {
-                "localized_name": "frames_dir",
-                "name": "frames_dir",
-                "type": "STRING",
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
                 "links": [
-                  699
+                  701
                 ]
-              },
-              {
-                "localized_name": "frames_saved",
-                "name": "frames_saved",
-                "type": "INT",
-                "links": null
               }
             ],
             "properties": {
-              "aux_id": "IAMCCS/IAMCCS-nodes",
-              "ver": "9025d5127b5351c6819c957580734ad63b9cc0fb",
-              "Node name for S&R": "IAMCCS_VAEDecodeToDisk",
-              "iamccs_hw_probe_apply_mode": "overwrite",
-              "ue_properties": {
-                "widget_ue_connectable": {},
-                "input_ue_unconnectable": {},
-                "version": "7.7"
+              "cnr_id": "comfy-core",
+              "ver": "0.17.2",
+              "Node name for S&R": "VAEDecode"
+            },
+            "widgets_values": [],
+            "color": "#222",
+            "bgcolor": "#000"
+          },
+          {
+            "id": 432,
+            "type": "VAEDecodeTiled",
+            "pos": [
+              2110,
+              7350
+            ],
+            "size": [
+              270,
+              150
+            ],
+            "flags": {},
+            "order": 6,
+            "mode": 0,
+            "inputs": [
+              {
+                "localized_name": "samples",
+                "name": "samples",
+                "type": "LATENT",
+                "link": 1059
+              },
+              {
+                "localized_name": "vae",
+                "name": "vae",
+                "type": "VAE",
+                "link": 1060
               }
+            ],
+            "outputs": [
+              {
+                "localized_name": "IMAGE",
+                "name": "IMAGE",
+                "type": "IMAGE",
+                "links": [
+                  1058
+                ]
+              }
+            ],
+            "properties": {
+              "cnr_id": "comfy-core",
+              "ver": "0.17.2",
+              "Node name for S&R": "VAEDecodeTiled"
             },
             "widgets_values": [
-              "iamccs_vae_frames",
-              "frame",
-              "jpg",
-              85,
-              true,
-              "auto",
-              1024,
-              64,
-              true
+              768,
+              128,
+              128,
+              8
             ],
             "color": "#222",
-            "bgcolor": "#000",
-            "shape": 1
+            "bgcolor": "#000"
           }
         ],
         "groups": [],
@@ -1733,22 +1619,6 @@
             "type": "IMAGE"
           },
           {
-            "id": 699,
-            "origin_id": 339,
-            "origin_slot": 0,
-            "target_id": 338,
-            "target_slot": 1,
-            "type": "STRING"
-          },
-          {
-            "id": 700,
-            "origin_id": 338,
-            "origin_slot": 0,
-            "target_id": 337,
-            "target_slot": 1,
-            "type": "IMAGE"
-          },
-          {
             "id": 701,
             "origin_id": 340,
             "origin_slot": 0,
@@ -1781,22 +1651,6 @@
             "type": "VIDEO"
           },
           {
-            "id": 705,
-            "origin_id": 334,
-            "origin_slot": 0,
-            "target_id": 339,
-            "target_slot": 0,
-            "type": "LATENT"
-          },
-          {
-            "id": 706,
-            "origin_id": -10,
-            "origin_slot": 2,
-            "target_id": 339,
-            "target_slot": 1,
-            "type": "VAE"
-          },
-          {
             "id": 707,
             "origin_id": 341,
             "origin_slot": 0,
@@ -1811,6 +1665,30 @@
             "target_id": 341,
             "target_slot": 0,
             "type": "BOOLEAN"
+          },
+          {
+            "id": 1058,
+            "origin_id": 432,
+            "origin_slot": 0,
+            "target_id": 337,
+            "target_slot": 1,
+            "type": "IMAGE"
+          },
+          {
+            "id": 1059,
+            "origin_id": 334,
+            "origin_slot": 0,
+            "target_id": 432,
+            "target_slot": 0,
+            "type": "LATENT"
+          },
+          {
+            "id": 1060,
+            "origin_id": -10,
+            "origin_slot": 2,
+            "target_id": 432,
+            "target_slot": 1,
+            "type": "VAE"
           }
         ],
         "extra": {
@@ -1822,8 +1700,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 431,
-          "lastLinkId": 1057,
+          "lastNodeId": 433,
+          "lastLinkId": 1060,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -2331,8 +2209,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 431,
-          "lastLinkId": 1057,
+          "lastNodeId": 433,
+          "lastLinkId": 1060,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -3516,8 +3394,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 431,
-          "lastLinkId": 1057,
+          "lastNodeId": 433,
+          "lastLinkId": 1060,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -3950,8 +3828,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 431,
-          "lastLinkId": 1057,
+          "lastNodeId": 433,
+          "lastLinkId": 1060,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -5356,8 +5234,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 431,
-          "lastLinkId": 1057,
+          "lastNodeId": 433,
+          "lastLinkId": 1060,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -5368,7 +5246,7 @@
           "bounding": [
             2290,
             5440,
-            204.25257873535156,
+            205.580078125,
             120
           ]
         },
@@ -5377,7 +5255,7 @@
           "bounding": [
             4340,
             5410,
-            214.2161102294922,
+            215.142578125,
             200
           ]
         },
@@ -5391,7 +5269,7 @@
             ],
             "label": "Prompt",
             "pos": [
-              2474.2525787353516,
+              2475.580078125,
               5460
             ]
           },
@@ -5404,7 +5282,7 @@
             ],
             "label": "length (seconds)",
             "pos": [
-              2474.2525787353516,
+              2475.580078125,
               5480
             ]
           },
@@ -5417,7 +5295,7 @@
             ],
             "label": "Enable CacheDiT",
             "pos": [
-              2474.2525787353516,
+              2475.580078125,
               5500
             ]
           },
@@ -5430,7 +5308,7 @@
             ],
             "label": "Use Gemma API Text Encode",
             "pos": [
-              2474.2525787353516,
+              2475.580078125,
               5520
             ]
           }
@@ -6843,8 +6721,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 431,
-          "lastLinkId": 1057,
+          "lastNodeId": 433,
+          "lastLinkId": 1060,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -7083,8 +6961,8 @@
         "version": 1,
         "state": {
           "lastGroupId": 33,
-          "lastNodeId": 431,
-          "lastLinkId": 1057,
+          "lastNodeId": 433,
+          "lastLinkId": 1060,
           "lastRerouteId": 0
         },
         "revision": 0,
@@ -7935,10 +7813,10 @@
     "VHS_MetadataImage": true,
     "VHS_KeepIntermediate": true,
     "ds": {
-      "scale": 1.2337801972367595,
+      "scale": 1.1698242013182631,
       "offset": [
-        -2958.62151788986,
-        -5658.831664217458
+        -3278.905909774425,
+        -5598.792567715585
       ]
     }
   },
