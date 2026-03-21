@@ -45,7 +45,7 @@ Connect the Multi Image Loader node's multi_output to automatically update the n
 
 It also has a sync feature that syncs all LTX Keyframer nodes together in realtime, removing the need to edit every single node manually every time you want to make a change to something. 
 
-**I would recommend only using the LTX Sequencer Node as it is superior to this node after further testing**
+**I would recommend using the LTX Sequencer Node as it is superior to this node after further testing**
 
 
 ## 💡 Workflows
