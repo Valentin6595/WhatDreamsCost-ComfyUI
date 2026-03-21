@@ -63,7 +63,7 @@ Or drag and drop image into ComfyUI to import workflow.
 - Rearranging images sometimes gets finicky. I'll try and fix this soon. It may be due to my ComfyUI frontend not matching the backend.
 
 **LTX Sequencer and LTX Keyframer**
-- Will randomly re-arrange the widget values when loading workflows. It happens very rarely, and for some reason only happens to 1 node. It can be reversed by just re-syncing it with another node.
+- Will randomly swap the widget values when loading workflows. It happens very rarely, and for some reason only happens to 1 node. It can be reversed by just re-syncing it with another node.
 
 It may also be due to my ComfyUI frontend not matching the backend (that has been causing other issues with ComfyUI, still waiting for ComfyUI to fix the issues with latest version)
 
