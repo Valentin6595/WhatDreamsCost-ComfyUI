@@ -17,6 +17,7 @@ All of my nodes are created with the help of AI, so there may or may not be redu
 
 ## 🔄 Recent Updates
 ❗❗❗ **UPDATE YOUR WORKFLOWS** ❗❗❗
+
 There are a couple issues with the original workflows (nodes that weren't registered, and the length randomzing every generation). I think i fixed everything now, and I cut out all of the extra uneeded nodes.
 
 # ⚙️ Custom Nodes
