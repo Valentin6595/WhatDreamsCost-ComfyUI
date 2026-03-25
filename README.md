@@ -66,7 +66,7 @@ It also has a sync feature that syncs all LTX Keyframer nodes together in realti
 ## Speech Length Calculator
 ![Speech Length Calculator GIF](https://github.com/user-attachments/assets/1ed07c7d-7d6a-48c4-92cc-8e332ebdf82b)
 
-This node calculates in realtime how long a video should be based on the dialogue. Any words in quotations will be considered as speech. The node updates in realtime without having to run the workflow, and outputs the length in frames depending on how fast the speech is.
+This node calculates in realtime how long a video should be based on the dialogue. Any words in quotations will be considered as speech. The node updates in realtime without having to run the workflow, and outputs the length depending on how fast the speech is.
 
 If you connect another string/text node to the text_input, it will still update in the length in realtime.
 
